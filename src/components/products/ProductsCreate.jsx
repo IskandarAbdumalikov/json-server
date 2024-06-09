@@ -16,20 +16,25 @@ const ProductsCreate = ({ setReload, setShowCreate }) => {
     }).then((res) => {
       console.log(res);
       setReload((p) => !p);
-      setShowCreate(false)
+      setShowCreate(false);
       e.target.reset();
     });
   };
   return (
     <div className="create__module">
       <form className="create__module" onSubmit={handleCreate} action="">
-        <input placeholder="Title" name="title" type="text" />
-        <input placeholder="Url" name="image" type="text" />
-        <input placeholder="Price" name="price" type="text" />
-        <input placeholder="OldPrice" name="oldPrice" type="text" />
-        <input placeholder="description" name="description" type="text" />
-        <input placeholder="Brand" name="brand" type="text" />
-        <input placeholder="Category" name="category" type="text" />
+        <input required placeholder="Title" name="title" type="text" />
+        <input
+          required
+          placeholder="Description"
+          name="description"
+          type="text"
+        />
+        <input required placeholder="Brand" name="brand" type="text" />
+        <input required placeholder="Url" name="image" type="text" />
+        <input required placeholder="Price" name="price" type="number" />
+        <input required placeholder="Old Price" name="oldPrice" type="number" />
+        <input required placeholder="Category" name="category" type="text" />
         <button>create</button>
       </form>
     </div>

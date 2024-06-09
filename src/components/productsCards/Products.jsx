@@ -59,7 +59,7 @@ const Products = () => {
               <h1>{product.brand}</h1>
               <p title={product.description}>{product.description}</p>
               <div className="products__card__info__price">
-                {product.oldPrice > product.price ? (
+                {+product.oldPrice > +product.price ? (
                   <del className="line__through">{product.oldPrice} USD</del>
                 ) : (
                   <del

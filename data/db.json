@@ -19,6 +19,26 @@
       "description": "Tezkor va Sifatli",
       "brand": "Nexia",
       "category": "Phone"
+    },
+    {
+      "id": "97e2",
+      "title": "Booknomy",
+      "image": "https://olcha.uz/image/600x600/products/TV5dNkdgak7Ffpeu62XOZCdSECM2duy9bzBosqfVOaRlVgI8hhzlZDWGbmMe.jpg",
+      "price": "23000000",
+      "oldPrice": "2354",
+      "category": "vdsfv",
+      "description": "Sizni yahshilikga yetaklovchi kitoblardir.",
+      "brand": "E-Books"
+    },
+    {
+      "id": "196e",
+      "title": "Laptop HP",
+      "description": "laptop HP ssd 1tb ",
+      "brand": "HP",
+      "image": "https://i5.walmartimages.com/seo/HP-Stream-14-Laptop-Intel-Celeron-N4000-4GB-SDRAM-32GB-eMMC-Office-365-1-yr-Royal-Blue_4f941fe6-0cf3-42af-a06c-7532138492fc_2.cb8e85270e731cb1ef85d431e49f0bf2.jpeg",
+      "price": "23344",
+      "oldPrice": "434",
+      "category": "laptops"
     }
   ]
 }

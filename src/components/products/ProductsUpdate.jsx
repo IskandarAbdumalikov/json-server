@@ -24,6 +24,7 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
     <div className="edit__module">
       <form onSubmit={handleEdit} action="">
         <input
+          required
           value={edit.title}
           placeholder="Title"
           name="title"
@@ -31,6 +32,7 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
           onChange={(e) => setEdit((p) => ({ ...p, title: e.target.value }))}
         />
         <input
+          required
           onChange={(e) => setEdit((p) => ({ ...p, image: e.target.value }))}
           value={edit.image}
           placeholder="Url"
@@ -38,6 +40,7 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
           type="text"
         />
         <input
+          required
           onChange={(e) => setEdit((p) => ({ ...p, price: e.target.value }))}
           value={edit.price}
           placeholder="Price"
@@ -45,6 +48,7 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
           type="number"
         />
         <input
+          required
           onChange={(e) => setEdit((p) => ({ ...p, oldPrice: e.target.value }))}
           value={edit.oldPrice}
           placeholder="OldPrice"
@@ -52,6 +56,7 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
           type="number"
         />
         <input
+          required
           onChange={(e) =>
             setEdit((p) => ({ ...p, description: e.target.value }))
           }
@@ -66,8 +71,10 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
           placeholder="Brand"
           name="brand"
           type="text"
+          required
         />
         <input
+          required
           onChange={(e) => setEdit((p) => ({ ...p, category: e.target.value }))}
           value={edit.category}
           placeholder="Category"
@@ -76,7 +83,7 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
         />
         <button>save</button>
       </form>
-      <img onClick={()=>setEdit(null)} className="closer" src={x} alt="" />
+      <img onClick={() => setEdit(null)} className="closer" src={x} alt="" />
     </div>
   );
 };
