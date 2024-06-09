@@ -1,12 +1,12 @@
 import React from "react";
 const API_URL = "http://localhost:21753/products";
+import "./module.scss";
+import x from "../../assets/x.svg";
 
 const ProductsUpdate = ({ edit, setReload, setEdit }) => {
   let handleEdit = (e) => {
     e.preventDefault();
 
-    // let formData = new FormData(e.target);
-    // let updatedUser = Object.fromEntries(formData.entries());
     fetch(`${API_URL}/${edit.id}`, {
       method: "PUT",
       headers: {
@@ -21,7 +21,7 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
     });
   };
   return (
-    <div>
+    <div className="edit__module">
       <form onSubmit={handleEdit} action="">
         <input
           value={edit.title}
@@ -42,14 +42,14 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
           value={edit.price}
           placeholder="Price"
           name="price"
-          type="text"
+          type="number"
         />
         <input
-          onChange={(e) => setEdit((p) => ({ ...p, oldPRice: e.target.value }))}
+          onChange={(e) => setEdit((p) => ({ ...p, oldPrice: e.target.value }))}
           value={edit.oldPrice}
           placeholder="OldPrice"
           name="oldPrice"
-          type="text"
+          type="number"
         />
         <input
           onChange={(e) =>
@@ -76,6 +76,7 @@ const ProductsUpdate = ({ edit, setReload, setEdit }) => {
         />
         <button>save</button>
       </form>
+      <img onClick={()=>setEdit(null)} className="closer" src={x} alt="" />
     </div>
   );
 };

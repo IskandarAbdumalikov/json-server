@@ -1,6 +1,8 @@
 const API_URL = "http://localhost:21753/products";
+import "./module.scss";
+import x from "../../assets/x.svg";
 
-const ProductsCreate = ({ setReload }) => {
+const ProductsCreate = ({ setReload, setShowCreate }) => {
   let handleCreate = (e) => {
     e.preventDefault();
     let formData = new FormData(e.target);
@@ -14,12 +16,13 @@ const ProductsCreate = ({ setReload }) => {
     }).then((res) => {
       console.log(res);
       setReload((p) => !p);
+      setShowCreate(false)
       e.target.reset();
     });
   };
   return (
-    <div>
-      <form onSubmit={handleCreate} action="">
+    <div className="create__module">
+      <form className="create__module" onSubmit={handleCreate} action="">
         <input placeholder="Title" name="title" type="text" />
         <input placeholder="Url" name="image" type="text" />
         <input placeholder="Price" name="price" type="text" />
