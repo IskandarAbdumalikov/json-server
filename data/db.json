@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": "d23c",
+      "title": "dhesdsfdffd",
+      "image": "https://t3.ftcdn.net/jpg/02/68/64/28/360_F_268642811_GZ1DZLoeqG9v5Sp7XRfZteGm0BbdHSKN.jpg",
+      "price": "2300000044",
+      "oldPrice": "2354",
+      "description": "Sizni yahshilikga yetaklovchi kitoblardir.",
+      "brand": "Books",
+      "category" : "phone"
+    }
+  ]
+}
